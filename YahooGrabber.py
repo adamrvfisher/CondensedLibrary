@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
+
 @author: Adam Reinhold Von Fisher - https://www.linkedin.com/in/adamrvfisher/
+
 """
 
 #This is a HTML scraper, I/O, and formatting tool that requests OHLC data from Yahoo!
