@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 
-@author: @author: Adam Reinhold Von Fisher - https://www.linkedin.com/in/adamrvfisher/
+@author: Adam Reinhold Von Fisher - https://www.linkedin.com/in/adamrvfisher/
 
 
 """
