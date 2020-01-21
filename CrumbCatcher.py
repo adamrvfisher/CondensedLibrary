@@ -3,7 +3,6 @@
 
 @author: Adam Reinhold Von Fisher - https://www.linkedin.com/in/adamrvfisher/
 
-
 """
 
 #If the Yahoo! response changes, it will be necessary to amend code
