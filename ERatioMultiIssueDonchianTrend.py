@@ -43,10 +43,9 @@ edgeratioframe = pd.DataFrame(index = range(2, len(LengthOfTest) + 2))
 
 #Initiate testing for loop
 for ticker in tickerlist:
-    #Just like this while loop - i'll never give up.
     while True: 
         try:
-            #Get data
+            #Request data
             Asset = YahooGrabber(ticker)
         except CParserError:
             continue
