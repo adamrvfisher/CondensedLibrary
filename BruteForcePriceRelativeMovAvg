@@ -5,6 +5,10 @@
 
 """
 
+#This is a two asset portfolio tester with a brute force optimizer
+#Takes all pair combos, tests, sorts, returns optimal params from all pairs + top performing pair params 
+
+
 #Import modules
 import numpy as np
 import random as rand
