@@ -21,7 +21,7 @@ ticker = 'GLD'
 #Request data
 while True: 
     try:
-        #Get data
+        #Request data
         Asset1 = YahooGrabber(ticker)
     except CParserError:
         continue
