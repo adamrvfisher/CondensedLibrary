@@ -13,10 +13,19 @@ import numpy as np
 import pandas as pd
 import warnings 
 from YahooGrabber import YahooGrabber
+from pandas.parser import CParserError
 
-#Inputs - request OHLC data
-#Ticker1 = 'GLD'
-#Asset1 = YahooGrabber(Ticker1)
+#Input ticker
+ticker = 'GLD'
+
+#Request data
+while True: 
+    try:
+        #Get data
+        Asset1 = YahooGrabber(ticker)
+    except CParserError:
+        continue
+    break
 
 #Don't display warnings
 warnings.filterwarnings("ignore",category =RuntimeWarning) 
@@ -67,11 +76,11 @@ Asset1['Method2'] = Asset1['Method2'].fillna(0)
 Asset1['Method3'] = Asset1['Method3'].fillna(0)
 Asset1['TrueRange'] = Asset1[['Method1','Method2','Method3']].max(axis = 1)
 #ATR in points; not %
-Asset1['4wkATRPoints'] = Asset1['TrueRange'].rolling(window = ATRwindow,
+Asset1['ATR'] = Asset1['TrueRange'].rolling(window = ATRwindow,
                                 center=False).mean()
 #Efficiency calculation
 Asset1['4wkCloseDiff'] = Asset1['Adj Close'] - Asset1['Adj Close'].shift(20)
-Asset1['4wkEfficiency'] = Asset1['4wkCloseDiff'] / Asset1['4wkATRPoints']
+Asset1['4wkEfficiency'] = Asset1['4wkCloseDiff'] / Asset1['ATR']
                                 
 #Market top and bottom calculation
 Asset1['RollingMax'] = Asset1['High'].rolling(window=donchianwindow, center=False).max()
