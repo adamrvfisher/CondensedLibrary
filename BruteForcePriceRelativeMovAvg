@@ -284,7 +284,7 @@ sharpe =(dailyreturn/dailyvol)
 Portfolio2['Multiplier'] = Portfolio2['Returns'].cumsum().apply(np.exp)
 #Portfolio drawdown
 PortfolioDrawdown =  1 - Portfolio2['Multiplier'].div(Portfolio2['Multiplier'].cummax())
-#conversionfactor = Portfolio['PriceRelative'][-1]
+
 print(kfloat)
 print('--------')
 print(Dataset2[kfloat])
