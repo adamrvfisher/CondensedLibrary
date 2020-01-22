@@ -39,10 +39,9 @@ donchianwindow = 20
 #How many days to calculate e-ratio for
 LengthOfTest = range(2, 50) #(2,3) = 2 day Eratio // assuming fill at "Entry Price"
 
-#Get data
+#Request data
 while True: 
     try:
-        #Get data
         Asset = YahooGrabber(ticker)
     except CParserError:
         continue
