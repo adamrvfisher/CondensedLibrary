@@ -8,8 +8,8 @@
 #This is a database creation tool, I/O, technical analysis tool, and formatting tool.
 #Prior to running this, run EntityCreation or FolderFramework and get DirtyNASDAQData.csv and UniverseList.csv
 #Yahoo sourcing for monthlies, weeklies, dailies, dividend, and qualitative data
-#When it finishes, YahooSource folder will populate - Parser errors are 405 errors from Yahoo! 
-#YahooGrabber.py is more reliable for data requests
+#When it finishes, YahooSource folder will populate - Parser errors are 405 errors from Yahoo! This can be avoided however..
+#YahooGrabber.py is more reliable for data requests see YahooGrabber() in ERatioMultiIssueDonchianTrend.py
 
 #Import modules
 import numpy as np
