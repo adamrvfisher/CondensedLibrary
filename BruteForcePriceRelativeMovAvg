@@ -197,7 +197,7 @@ for m in MajorList:
 Portfolio2 = pd.DataFrame()
 #find top parameters
 z1 = Dataset2.iloc[6]
-w1 = np.percentile(z1, 99)
+w1 = np.percentile(z1, 97)
 v1 = [] #this variable stores the Nth percentile of top performers
 winners = pd.DataFrame() #this variable stores params
 
