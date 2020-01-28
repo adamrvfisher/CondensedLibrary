@@ -111,14 +111,14 @@ for m in MajorList:
         Asset1['Position'] = np.where(Asset1['PriceRelative'].shift(1) > Asset1['PRMA'].shift(1),
                                         c,a)
         #Apply position size to returns to pass to portfolio
-        Asset1['Pass'] = (Asset1['LogRet'] * Asset1['Position'])
+        Asset1['Pass'] = (Asset1['LogRet'] * Asset1['Position'].shift(1))
 
         #Position sizing       
         Asset2['Position'] = b
         Asset2['Position'] = np.where(Asset1['PriceRelative'].shift(1) > Asset1['PRMA'].shift(1),
                                         d,b)
         #Apply position size to returns to pass to portfolio
-        Asset2['Pass'] = (Asset2['LogRet'] * Asset2['Position'])
+        Asset2['Pass'] = (Asset2['LogRet'] * Asset2['Position'].shift(1))
 
         #Pass position returns to portfolio
         Portfolio['Asset1Pass'] = (Asset1['Pass']) #* (-1) #Pass a short position for long only position sizing
@@ -259,14 +259,14 @@ Asset3['Position'] = (Dataset2[k[0]][0])
 Asset3['Position'] = np.where(Asset3['PriceRelative'].shift(1) > Asset3['PRMA'].shift(1),
                                     Dataset2[k[0]][2],Dataset2[k[0]][0])
 #Apply position size to pass to portfolio
-Asset3['Pass'] = (Asset3['LogRet'] * Asset3['Position'])
+Asset3['Pass'] = (Asset3['LogRet'] * Asset3['Position'].shift(1))
 
 #Position sizing from params
 Asset4['Position'] = (Dataset2[kfloat][1])
 Asset4['Position'] = np.where(Asset3['PriceRelative'].shift(1) > Asset3['PRMA'].shift(1),
                                     Dataset2[k[0]][3],Dataset2[k[0]][1])
 #Apply position size to pass to portfolio
-Asset4['Pass'] = (Asset4['LogRet'] * Asset4['Position'])
+Asset4['Pass'] = (Asset4['LogRet'] * Asset4['Position'].shift(1))
 
 #Pass to portfolio
 Portfolio2['Asset3Pass'] = Asset3['Pass']
