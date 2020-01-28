@@ -283,9 +283,9 @@ sharpe =(dailyreturn/dailyvol)
 #Portfolio returns on $1
 Portfolio2['Multiplier'] = Portfolio2['Returns'].cumsum().apply(np.exp)
 #Portfolio drawdown
-PortfolioDrawdown =  1 - Portfolio2['Multiplier'].div(Portfolio2['Multiplier'].cummax())
+#PortfolioDrawdown =  1 - Portfolio2['Multiplier'].div(Portfolio2['Multiplier'].cummax())
 
 print(kfloat)
 print('--------')
 print(Dataset2[kfloat])
-print('Max Drawdown is ',max(PortfolioDrawdown),'See Dataset2')
+#print('Max Drawdown is ',max(PortfolioDrawdown),'See Dataset2')
