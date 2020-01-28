@@ -5,10 +5,6 @@
 
 """
 
-#This is a two asset portfolio tester with a brute force optimizer
-#Takes all pair combos, tests, sorts, returns optimal params from all pairs + top performing pair params 
-
-
 #Import modules
 import numpy as np
 import random as rand
@@ -23,7 +19,7 @@ Empty = []
 Start = t.time()
 Counter = 0
 Counter2 = 0
-iterations = range(0, 100)
+iterations = range(0, 1500)
 Dataset2 = pd.DataFrame()
 
 #Input tickers for study 
@@ -131,11 +127,12 @@ for m in MajorList:
         
         #Returns on $1
         Portfolio['Multiplier'] = Portfolio['Returns'].cumsum().apply(np.exp)
-        Portfolio['Multiplier'] = Portfolio['Multiplier'].fillna(1)
-        #This calculation is spurious
-        drawdown =  1 - Portfolio['Multiplier'].div(Portfolio['Multiplier'].cummax())
-        MaxDD = max(drawdown)
-        
+        Portfolio['Multiplier'] = Portfolio['Multiplier'].fillna(0)
+        #Max drawdown calculation
+        MultiplierMax = Portfolio['Multiplier'].cummax()
+        Drawdown = (Portfolio['Multiplier']/MultiplierMax) - 1
+        Drawdown = Drawdown.fillna(0)
+        MaxDD = abs(min(Drawdown.cummin()))
         #Optional max drawdown constraint
 #        if MaxDD > float(.51): 
 #            continue
@@ -282,10 +279,13 @@ dailyvol = Portfolio2['Returns'].std()
 sharpe =(dailyreturn/dailyvol)
 #Portfolio returns on $1
 Portfolio2['Multiplier'] = Portfolio2['Returns'].cumsum().apply(np.exp)
-#This calculation is spurious
-#PortfolioDrawdown =  1 - Portfolio2['Multiplier'].div(Portfolio2['Multiplier'].cummax())
-
+Portfolio2['Multiplier'] = Portfolio2['Multiplier'].fillna(0)
+#Portfolio drawdown
+MultiplierMax2 = Portfolio2['Multiplier'].cummax()
+Drawdown2 = (Portfolio2['Multiplier']/MultiplierMax2) - 1
+Drawdown2 = Drawdown2.fillna(0)
+PortfolioDrawdown = abs(min(Drawdown2.cummin()))
 print(kfloat)
 print('--------')
 print(Dataset2[kfloat])
-#print('Max Drawdown is ',max(PortfolioDrawdown),'See Dataset2')
+print('Max Drawdown is ', str(PortfolioDrawdown) ,'See Dataset2')
