@@ -102,7 +102,7 @@ y = np.array(data['LogRet'][50:])
 print("Data shape: {}".format(X.shape))
 print("--------------------------------")
 
-#STRATIFIED K CROSS VALIDATION AKA RANDOM DATA - NON SEQUENTIAL LIKE IN KthFoldRSI_II.py
+#STRATIFIED K CROSS VALIDATION AKA RANDOM DATA - NON SEQUENTIAL UNLIKE IN KthFoldRSI_II.py
 LinRegrScore = cross_val_score(LinearRegression(), X, y, cv = 5)
 print('Linear Regression Average -- ', str(LinRegrScore.mean()))
 LassoRegrScore = cross_val_score(Lasso(), X, y, cv = 5)
