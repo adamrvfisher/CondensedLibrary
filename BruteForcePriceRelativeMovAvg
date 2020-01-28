@@ -131,7 +131,7 @@ for m in MajorList:
         
         #Returns on $1
         Portfolio['Multiplier'] = Portfolio['Returns'].cumsum().apply(np.exp)
-        
+        Portfolio['Multiplier'] = Portfolio['Multiplier'].fillna(1)
         #Max drawdown calculation
         drawdown =  1 - Portfolio['Multiplier'].div(Portfolio['Multiplier'].cummax())
         MaxDD = max(drawdown)
