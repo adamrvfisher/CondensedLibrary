@@ -7,16 +7,21 @@
 
 #Kth fold advice optimizer
 
+#Define function
 def KthFoldRSIDecisionOptimizer(Asset, NumIterations):
-        
+    #Import modules
     import numpy as np
     import pandas as pd
     import time as t
     import random as rand
+     
+    #Number of iterations for brute force optimization
     iterations = range(0,NumIterations)
+    #Variable assignments
     Empty = []
     Counter = 0
     DataSet = pd.DataFrame()
+    
     start = t.time()
     for i in iterations:
         Counter = Counter + 1
