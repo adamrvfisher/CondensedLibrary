@@ -160,7 +160,6 @@ for m in MajorList:
         Empty.append(dailyreturn/MaxDD)
         Empty.append(MaxDD)
         Emptyseries = pd.Series(Empty)
-        Dataset[0] = Emptyseries.values
         Dataset[i] = Emptyseries.values
         Empty[:] = [] 
         
