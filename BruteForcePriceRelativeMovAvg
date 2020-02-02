@@ -267,6 +267,7 @@ Asset4['Pass'] = (Asset4['LogRet'] * Asset4['Position'].shift(1))
 #Pass to portfolio
 Portfolio2['Asset3Pass'] = Asset3['Pass']
 Portfolio2['Asset4Pass'] = Asset4['Pass'] 
+
 #Return calculation
 Portfolio2['Returns'] = Portfolio2['Asset3Pass'] + Portfolio2['Asset4Pass'] 
 #Plotting retuns
@@ -276,14 +277,18 @@ Portfolio2['Returns'][:].cumsum().apply(np.exp).plot(grid=True,
 dailyreturn = Portfolio2['Returns'].mean()
 dailyvol = Portfolio2['Returns'].std()
 sharpe =(dailyreturn/dailyvol)
+
 #Portfolio returns on $1
 Portfolio2['Multiplier'] = Portfolio2['Returns'].cumsum().apply(np.exp)
 Portfolio2['Multiplier'] = Portfolio2['Multiplier'].fillna(0)
+
 #Portfolio drawdown
 MultiplierMax2 = Portfolio2['Multiplier'].cummax()
 Drawdown2 = (Portfolio2['Multiplier']/MultiplierMax2) - 1
 Drawdown2 = Drawdown2.fillna(0)
 PortfolioDrawdown = abs(min(Drawdown2.cummin()))
+
+#Top parameters
 print(kfloat)
 print('--------')
 print(Dataset2[kfloat])
