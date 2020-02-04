@@ -5,10 +5,11 @@
 
 """
 
-#This file is dependent on EntityCreation or FolderFramework
-#Prior to running this, run EntityCreation or FolderFramework, assign DL to  and get DirtyNASDAQdata
+#Run FolderFramework.py to set up folder directory
+#Also, download and place in respective folders (or assign  to variables) UniverseList.csv and NASDAQData.csv
+#Be sure to assign Directory Location as specified in FolderFramework.py
 #Yahoo sourcing for monthlies, weeklies, dailies, dividend, and qualitative data
-#When it finishes, YahooSource folder will populate
+#As it runs, Directory Location folder will populate
 
 #Import modules
 import numpy as np
