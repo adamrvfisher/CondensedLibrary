@@ -31,7 +31,7 @@ dataII = dataII[-len(data):]
 dataIII = dataIII[-len(data):]
 dataIV = dataIV[-len(data):]
 
-#X is features n OG features, y is log returns 
+#X are features, y are log returns 
 #Levered equities
 X = np.array(data[['8wkBreakOutRatio', '8wkBreakDownRatio', '4wkBreakOutRatio', 
 '4wkBreakDownRatio', '2wkBreakOutRatio', '2wkBreakDownRatio', 'HigherOpen', 'LowerOpen',
