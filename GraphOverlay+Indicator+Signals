@@ -5,7 +5,9 @@ Created on Tue Feb  5 19:50:19 2019
 @author: AmatVictoriaCuramIII
 """
 
-#Graphs
+#This is a graphical display tool for time series and techincal analysis
+
+#Import modules
 from YahooGrabber import YahooGrabber
 import matplotlib.pyplot as plt
 from matplotlib.finance import candlestick_ohlc
