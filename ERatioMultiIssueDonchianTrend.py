@@ -5,7 +5,8 @@
 
 """
 
-#N Period Edge Ratio Computation for multiple tickers
+#N period edge ratio computation for one signal over multiple tickers
+#This is a time series and technical analysis tool
 
 #Imports 
 from YahooGrabber import YahooGrabber
