@@ -4,7 +4,7 @@
 @author: Adam Reinhold Von Fisher - https://www.linkedin.com/in/adamrvfisher/
 
 """
-#Developed in Python 3.5 
+ 
 #This is a trading model that tracks all trades, uses I/O - HTML scraping from YahooGrabber, techincal analysis + summary statistics 
 #R Multiple Finder; Trade Data Tracking
 
