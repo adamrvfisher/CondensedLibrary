@@ -5,8 +5,7 @@
 
 """
 
-#Entity Creation - Folder Framework
-
+#Folder Framework - run this prior to YahooDatabase.py - Set Directory Location ---> DL
 #Modify the structure and contents of the directory hierarchy to be populated by processes
 
 #Import modules
