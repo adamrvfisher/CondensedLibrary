@@ -5,6 +5,10 @@
 
 """
 
+#This is a two asset portfolio strategy back tester.
+#It list all possible asset pairs and performs brute force optimization 
+#Using a price relative moving average signal that alters portfolio allocation
+
 #Import modules
 import numpy as np
 import random as rand
