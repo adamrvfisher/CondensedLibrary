@@ -5,7 +5,7 @@
 
 """
 
-#If the Yahoo! html response changes, it will be necessary to amend code
+#If the Yahoo! HTML response changes, it will be necessary to amend code
 #This is a HTML scraping and formatting tool
 
 #Define function
