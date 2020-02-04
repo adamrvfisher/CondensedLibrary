@@ -5,7 +5,8 @@
 
 """
 
-#N Period Edge Ratio Computation for single issue with graphical displays
+#N period edge ratio computation for single issue with graphical displays
+#This is a time series, statistical, and techincal analysis tool
 
 #Imports 
 from YahooGrabber import YahooGrabber
