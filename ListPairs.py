@@ -4,8 +4,9 @@
 @author: Adam Reinhold Von Fisher - https://www.linkedin.com/in/adamrvfisher/
 
 """
+
 #This is an organizational tool that pairs items in list into a comprehensive list of all possible pairs.
-#For use in SpeedDater_ apps
+#For use in BruteForcePriceRelativeMovAvg.py
 
 def ListPairs(tickers):
     import itertools as it
