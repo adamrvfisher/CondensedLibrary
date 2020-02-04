@@ -6,7 +6,8 @@
 """
  
 #This is a trading model that tracks all trades, uses I/O - HTML scraping from YahooGrabber, techincal analysis + summary statistics 
-#R Multiple Finder; Trade Data Tracking
+#R Multiple Finder; Trade Data Tracking 
+#Using price channels/Donchian Trend w/ efficiency filter, single stock, single frequency
 
 #Import libraries
 import numpy as np
