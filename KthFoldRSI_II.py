@@ -5,7 +5,8 @@
 
 """
 
-#This is a Kth fold optimization using RSI indicator as a signal
+#This is a time series analysis and strategy testing tool
+#Kth fold optimization using RSI indicator as a signal
 
 #Import modules
 from KthFoldRSIParamGenerator import KthFoldRSIParamGenerator
