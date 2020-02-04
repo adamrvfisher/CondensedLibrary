@@ -5,7 +5,8 @@
 
 """
 
-#Kth fold - RSI - final param tester
+#This is part of a time series analysis and strategy testing tool
+#Kth fold optimization using RSI indicator as a signal
 
 def KthFoldRSIFinalParamTester(Asset, FinalParameterSet):
     
