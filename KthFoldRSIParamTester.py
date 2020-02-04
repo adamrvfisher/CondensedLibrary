@@ -5,7 +5,8 @@
 
 """
 
-#Kth Fold RSI Param Tester
+#This is part of a time series analysis and strategy testing tool
+#Kth fold optimization using RSI indicator as a signal
 
 #Input ticker
 #ticker = 'GLD'
