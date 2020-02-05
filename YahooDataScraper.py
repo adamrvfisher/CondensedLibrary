@@ -5,7 +5,7 @@
 
 """
 
-#This is a database creation and modification, HTML scraper, and techincal analysis tool 
+#This is a HTML scraper and techincal analysis tool 
 #Run FolderFramework.py to set up folder directory
 #Also, download and place in respective folders (or assign  to variables) UniverseList.csv and NASDAQData.csv
 #Be sure to assign Directory Location as specified in FolderFramework.py
