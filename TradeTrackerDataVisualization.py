@@ -6,7 +6,6 @@
 """
 
 #Developed in Python 3.5 
-
  
 #This is a trading model that tracks all trades, uses I/O - HTML scraping from YahooGrabber,
 #techincal analysis + summary statistics, and data visualization - R Multiple Finder; Trade Data Tracking 
