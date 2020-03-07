@@ -2,4 +2,4 @@
 # People involved in time series and risk analysis - traders, risk managers, finance students, etc. may find useful tools here.
 # Most apps are built around Yahoo! time series format dataframes; however, the addition of feature columns to the time series are helpful for machine learning.
 # To install, download CondensedLibrary to working directory. Most apps will run without any configuration. You may choose to run EntityCreation.py to set up a folder heirarcy (input directory location), and then reference directory location and run YahooDataScraper.py - this will populate a local folder directory - use UniverseList.csv and NASDAQData.csv in YahooDataScraper.py. You may chose to quickstart and just pull data into apps with YahooGrabber.py.
-# HTTP requests from YahooGrabber.py feed most of the apps data for calculation.
+# HTTP requests from YahooGrabber.py feed most of the apps data for calculation - If Yahoo server API changes, use pd.read_csv + AA_TimeSeries.csv for example time series. 
