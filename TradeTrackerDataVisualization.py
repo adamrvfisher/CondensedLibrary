@@ -15,7 +15,7 @@
 import numpy as np
 import pandas as pd
 import warnings 
-from YahooGrabber import YahooGrabber
+from YahooGrabberII import YahooGrabberII
 from pandas.parser import CParserError
 import matplotlib.pyplot as plt
 from matplotlib.finance import candlestick_ohlc
@@ -28,7 +28,7 @@ ticker = 'GLD'
 while True: 
     try:
         #Get data
-        Asset1 = YahooGrabber(ticker)
+        Asset1 = YahooGrabberII(ticker)
     except CParserError:
         continue
     break
