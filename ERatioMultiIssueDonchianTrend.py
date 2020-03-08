@@ -9,7 +9,7 @@
 #This is a time series, statistical, and technical analysis tool
 
 #Imports 
-from YahooGrabber import YahooGrabber
+from YahooGrabberII import YahooGrabberII
 import numpy as np
 import time as t
 import pandas as pd
@@ -47,7 +47,7 @@ for ticker in tickerlist:
     while True: 
         try:
             #Request data
-            Asset = YahooGrabber(ticker)
+            Asset = YahooGrabberII(ticker)
         except CParserError:
             continue
         break
