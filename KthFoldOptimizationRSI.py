@@ -13,13 +13,12 @@ from KthFoldRSIParamGenerator import KthFoldRSIParamGenerator
 from KthFoldRSIParamTester import KthFoldRSIParamTester
 from KthFoldRSIFinalParamTester import KthFoldRSIFinalParamTester
 from KthFoldRSIDecisionOptimizer import KthFoldRSIDecisionOptimizer
-from YahooGrabber import YahooGrabber
+from YahooGrabberII import YahooGrabberII
 import numpy as np
 import pandas as pd
 from pandas.parser import CParserError
 import itertools as it
 import math
-#from YahooSourceDailyGrabber import YahooSourceDailyGrabber
 
 #Variable assignment
 DataSetNames = [] 
@@ -46,7 +45,7 @@ kRange = range(0,k)
 #Request data
 while True:
     try:
-        Asset = YahooGrabber(ticker)
+        Asset = YahooGrabberII(ticker)
     except CParserError:
         continue
     break
