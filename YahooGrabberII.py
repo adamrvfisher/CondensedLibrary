@@ -26,6 +26,7 @@ def YahooGrabberII(ticker):
            '&period2=2552397400&interval=1d&filter=history&frequency=1d')
     #Make post request
     page = requests.post(url)
+    #Confirming response code
     print(page)
     #Format response to text
     textI = page.text
@@ -42,6 +43,7 @@ def YahooGrabberII(ticker):
     #text to json
     textI = json.loads(textI)
     
+    #Reading json to DataFrame in reverse - DataFrame comes out in ascending order by date
     for i in reversed(textI):
         Asset = Asset.append(i, ignore_index = True)
         
