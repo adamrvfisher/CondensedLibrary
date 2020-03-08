@@ -14,7 +14,7 @@ import numpy as np
 import random as rand
 import pandas as pd
 import time as t
-from YahooGrabber import YahooGrabber
+from YahooGrabberII import YahooGrabberII
 from ListPairs import ListPairs
 from pandas.parser import CParserError
 
@@ -47,8 +47,8 @@ for m in MajorList:
     #Request data
     while True: 
         try:
-            Asset1 = YahooGrabber(Ticker1)
-            Asset2 = YahooGrabber(Ticker2)            
+            Asset1 = YahooGrabberII(Ticker1)
+            Asset2 = YahooGrabberII(Ticker2)            
         except CParserError:
             continue
         break    
