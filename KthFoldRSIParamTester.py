@@ -8,19 +8,6 @@
 #This is part of a time series analysis and strategy testing tool
 #Kth fold optimization using RSI indicator as a signal
 
-#Input ticker
-#ticker = 'GLD'
-#
-##Condensed data from Database
-#Asset = YahooSourceDailyGrabber(ticker)
-#Asset1 = Asset[-500:]
-#Asset1 = Asset1[['Open', 'High', 'Low', 'Close', 'Adj Close']]
-#Asset = Asset[-1000:-500]
-#Asset = Asset[['Open', 'High', 'Low', 'Close', 'Adj Close']]
-#
-##These params go into the tester with the Asset times series
-#ParameterSet = KthFoldRSIParamGenerator(Asset1, 50000)
-
 def KthFoldRSIParamTester(Asset, ParameterSet):
     
     #Import modules
