@@ -18,14 +18,14 @@ from sklearn.linear_model import Lasso
 from sklearn.linear_model import LassoLars
 from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeRegressor
-from YahooSourceDailyGrabber import YahooSourceDailyGrabber
+from YahooGrabberII import YahooGrabberII
 
 #Grab localhost data
-data = YahooSourceDailyGrabber('TQQQ')
+data = YahooGrabberII('TQQQ')
 #Add supplementary data
-dataII = YahooSourceDailyGrabber('GLD')
-dataIII = YahooSourceDailyGrabber('TLT')
-dataIV = YahooSourceDailyGrabber('^VIX')
+dataII = YahooGrabberII('GLD')
+dataIII = YahooGrabberII('TLT')
+dataIV = YahooGrabberII('^VIX')
 #trim data to match length
 dataII = dataII[-len(data):]
 dataIII = dataIII[-len(data):]
@@ -135,4 +135,4 @@ GradBoostRegrScore = cross_val_score(GradientBoostingRegressor(), X, y, cv = 5)
 print('Gradient Boost Regression Average -- ', str(GradBoostRegrScore.mean()))
 
 print("--------------------------------")
-print("Time for parameter tuning.")
+print("Time for parameter tuning, then model ensembling.")
