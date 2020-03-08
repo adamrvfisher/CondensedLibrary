@@ -9,7 +9,7 @@
 #This is a time series, statistical, and techincal analysis tool
 
 #Imports 
-from YahooGrabber import YahooGrabber
+from YahooGrabberII import YahooGrabberII
 import numpy as np
 import time as t
 import pandas as pd
@@ -43,7 +43,7 @@ LengthOfTest = range(2, 50) #(2,3) = 2 day Eratio // assuming fill at "Entry Pri
 #Request data
 while True: 
     try:
-        Asset = YahooGrabber(ticker)
+        Asset = YahooGrabberII(ticker)
     except CParserError:
         continue
     break
