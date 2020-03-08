@@ -6,6 +6,8 @@
 """
 
 #Supervised Machine Learning - FDL Data - Model Evaluation - Continuous Data
+#Features are not available from YahooGrabberII.py - use calculations from DatabaseModification.py to quickly add features
+#Alternatively, run YahooDataScraper.py to poplulate directory with asset pricing + features
 
 #Import modules
 import numpy as np
