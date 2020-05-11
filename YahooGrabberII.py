@@ -9,7 +9,7 @@
 
 #Define function
 def YahooGrabberII(ticker):
-
+    
     #Import modules
     import requests
     import pandas as pd
@@ -56,6 +56,13 @@ def YahooGrabberII(ticker):
     #Set index to Date
     Asset = Asset.set_index('Date')
     
+    #Fill Asset price data type as PRICE 
+    Asset['type'] = Asset['type'].fillna('PRICE')
+    
+    #Modify Asset
+    Asset = Asset.loc[Asset['type'] == 'PRICE']
+    Asset = Asset.drop(['amount', 'data', 'type', 'denominator', 'numerator', 'splitRatio'], axis = 1)
+    
     #End timer    
     endtime = t.time()
     #Time calculation
@@ -64,4 +71,3 @@ def YahooGrabberII(ticker):
     print("Data request for " + ticker + " took " + str(duration) +" seconds.") 
 
     return Asset
-    
