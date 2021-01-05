@@ -118,7 +118,7 @@ AS
 GO
 
 /*
---Execute InsertCataloguestored procedure
+--Execute InsertCatalogue stored procedure
 EXECUTE dbo.InsertCatalogue
 		@SKUName = 'Orange', 
 		@Price = 2.99, 
